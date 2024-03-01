@@ -1,0 +1,87 @@
+.main {
+
+  &_wrapper {
+    @include flex_center_column;
+    width:100%;
+    min-height: calc(100vh - 70px); // 70px height of header
+    background: $main_bg_color;
+    color: $primary_text_color;
+    padding: 2rem 0;
+  }
+
+  &_title {
+    @include flex_center_column;
+    font-size: 1.1rem;
+  }
+
+  &_progress_bar_wrapper {
+    @include flex_center_column;
+    width: 70%;
+    height: auto;
+    margin-top: 7rem;
+  }
+
+  &_buttons_container {
+    @include flex_center;
+    justify-content: space-between;
+    width: fit-content;
+    height: auto;
+    margin-top: 7rem;
+  }
+
+  &_button {
+    padding: .5rem;
+    font-size: .8rem;
+    color: $primary_text_color;
+    box-shadow: $buttons_box_shadow;
+    background: $buttons_bg_color;
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+
+  &_add_progress_bar {
+
+    &_wrapper {
+      @include flex_center;
+      width: fit-content;
+      height: 20px;
+      margin-top: 7rem;
+    }
+    
+    &_button {
+      @include flex_center;
+      width:20px;
+      height:100%;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $primary_text_color;
+      background: green;
+      border-radius: 50%;
+      margin-right: 2rem;
+      padding: 0.7rem;
+      cursor: pointer;
+    }
+
+    &_input_title,
+    &_input_progress {
+      width: 300px;
+      height: 100%;
+      font-size: 0.8rem;
+      color: $primary_text_color;
+      background: $buttons_bg_color;
+      padding: 0.7rem;
+      box-shadow: $buttons_box_shadow;
+    }
+    
+    &_input_title {
+      margin-right: 1rem;
+    }
+  }
+}

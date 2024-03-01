@@ -1,0 +1,69 @@
+.progress_bar {
+
+  &_title_and_bar_container {
+    @include flex_center_column;
+    width: 100%;
+    height: auto;
+
+    &:nth-child(n+2) {
+      margin-top: 3rem;
+    }
+  }
+
+  &_title {
+    @include flex_center;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 0.8rem;
+    color: $primary_text_color;
+  }
+
+  &_container {
+    @include flex_center_row;
+    width: 100%;
+    height: auto;
+    margin-top: 0.7rem;
+  }
+
+  &_percentage {
+    font-size: 1rem;
+    color: $primary_text_color;
+    margin-right: 1rem;
+
+    &.animate {
+      transform: scale(1.1);
+      font-weight: lighter;
+    }
+  }
+
+  &_bg_container {
+    width: 100%;
+    height: 15px;
+    background-color: $bar_bg_container_color;
+    box-shadow: $bar_box_shadow;
+    overflow: hidden;
+  }
+
+  &_filler {
+    width:100%;
+    height: 100%;
+    transition: width 0.2s ease-in;
+  }
+
+  &_checkbox {
+    margin-left: 1rem;
+  }
+
+  &_delete_icon_container {
+    @include flex_center;
+    width: 1.2rem;
+    height: auto;
+    margin-left: 2rem;
+  }
+
+  &_delete_icon {
+    width: 100%;
+    height: 100% ;
+    cursor: pointer;
+  }
+}
